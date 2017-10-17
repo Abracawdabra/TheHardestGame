@@ -1,0 +1,7 @@
+{
+  "description": "The hardest.",
+  "license": "MIT",
+  "dependencies": {
+    "@types/createjs": "0.0.29"
+  }
+}

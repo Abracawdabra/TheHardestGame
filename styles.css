@@ -1,0 +1,18 @@
+body
+{
+    margin: 0;
+}
+
+.centered-content
+{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.centered-content div,
+.centered-content p,
+.centered-content canvas
+{
+    display: inline-block;
+}
