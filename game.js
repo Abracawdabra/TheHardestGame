@@ -202,18 +202,20 @@
     p._onKeyDown = function(e) {
         var t = createjs.Ticker.getTime();
         var key = TheHardestGame._getKey(e);
-        if ((key === "Spacebar" || key === " " || key === 32) && !this._spaceIsDown && this._startTime > 0) {
-            var time_difference = t - this._startTime;
-            if (time_difference <= TheHardestGame.KEY_MIN_REACTION_TIME) {
-                if (this._level === TheHardestGame.MAX_LEVEL) {
-                    this._showWinScreen();
+        if ((key === "Spacebar" || key === " " || key === 32)) {
+            if (!this._spaceIsDown && this._startTime > 0) {
+                var time_difference = t - this._startTime;
+                if (time_difference <= TheHardestGame.KEY_MIN_REACTION_TIME) {
+                    if (this._level === TheHardestGame.MAX_LEVEL) {
+                        this._showWinScreen();
+                    }
+                    else {
+                        this._gotoNextLevel();
+                    }
                 }
                 else {
-                    this._gotoNextLevel();
+                    this._showFailScreen(time_difference - TheHardestGame.KEY_MIN_REACTION_TIME);
                 }
-            }
-            else {
-                this._showFailScreen(time_difference - TheHardestGame.KEY_MIN_REACTION_TIME);
             }
 
             this._spaceIsDown = true;
