@@ -159,6 +159,7 @@
         this._playAgainButtonHelper = null;
         this._level = 1;
         this._startTime = 0;
+        this._spaceIsDown = false;
         window.addEventListener("keydown", this._onKeyDown);
         window.addEventListener("keyup", this._onKeyUp);
         this._showCountdown();
@@ -216,9 +217,10 @@
                 else {
                     this._showFailScreen(time_difference - TheHardestGame.KEY_MIN_REACTION_TIME);
                 }
+
+                this._spaceIsDown = true;
             }
 
-            this._spaceIsDown = true;
             e.preventDefault();
         }
     };
