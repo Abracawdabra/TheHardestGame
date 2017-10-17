@@ -15,4 +15,5 @@ body
 .centered-content canvas
 {
     display: inline-block;
+    vertical-align: middle;
 }
