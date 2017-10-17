@@ -1,5 +1,7 @@
 /**
  * The Hardest Game in the World
+ * @author Cawdabra
+ * @license MIT
  */
 
 (function () {
