@@ -217,10 +217,9 @@
                 else {
                     this._showFailScreen(time_difference - TheHardestGame.KEY_MIN_REACTION_TIME);
                 }
-
-                this._spaceIsDown = true;
             }
 
+            this._spaceIsDown = true;
             e.preventDefault();
         }
     };
