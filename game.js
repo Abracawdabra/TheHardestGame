@@ -116,6 +116,7 @@
 
         TheHardestGame.assets = {};
         var queue = new createjs.LoadQueue(PREFER_XHR);
+        queue.installPlugin(createjs.Sound);
         queue.on("fileload", this._onFileLoad, this, false);
         queue.on("complete", this._onPreloadComplete, this, true);
         queue.loadManifest([
@@ -243,7 +244,7 @@
         this._stage.removeAllChildren();
 
         this._stage.addChild(new createjs.Bitmap(TheHardestGame.assets["youarewinnerhahaha.png"]));
-        createjs.Sound.play("sounds/applause.mp3");
+        createjs.Sound.play("applause.mp3");
 
         var canvas = this._stage.canvas;
         this._playAgainButtonHelper = this._addButton(canvas.width - 175, canvas.height - 85, 150, 60, 15, "Again?", "20px Arial", this._startGame);
