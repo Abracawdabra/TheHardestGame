@@ -30,10 +30,8 @@
     };
     var p = TheHardestGame.prototype;
 
-    // I'd make it one millisecond or lower but I'm not entirely certain if
-    // execution time might always cause the player to lose (I'm still not sure
-    // with this low either because I can't fucking beat it).
-    TheHardestGame.KEY_MIN_REACTION_TIME = 2;
+
+    TheHardestGame.KEY_MIN_REACTION_TIME = 4;
 
     TheHardestGame.MAX_LEVEL = 5;
 
