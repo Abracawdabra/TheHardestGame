@@ -243,7 +243,7 @@
         this._stage.removeAllChildren();
 
         this._stage.addChild(new createjs.Bitmap(TheHardestGame.assets["youarewinnerhahaha.png"]));
-        createjs.Sound.play(TheHardestGame.assets["applause.mp3"]);
+        createjs.Sound.play("applause.mp3");
 
         var canvas = this._stage.canvas;
         this._playAgainButtonHelper = this._addButton(canvas.width - 175, canvas.height - 85, 150, 60, 15, "Again?", "20px Arial", this._startGame);
